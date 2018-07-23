@@ -45,7 +45,7 @@ void loop() { //open loop function
 
 To move the valiant use the following functions
 
-#### Move Forwards
+#### Motors Forwards
 
 To move forwards at full speed use the function:
 
@@ -63,7 +63,7 @@ where speed is between 0 and 255, 0 being stop and 255 full speed.
 
 
 
-#### Move Reverse
+#### Motors Reverse
 
 To reverse at full speed use the function:
 
@@ -75,6 +75,41 @@ To reverse at a set speed use the function:
 
 ```
 bobTheRobot.reverse(speed);
+```
+
+where speed is between 0 and 255, 0 being stop and 255 full speed.
+
+
+
+#### Motors Left
+
+To move left at full speed use the function:
+
+```
+bobTheRobot.left();
+```
+
+To move left at a set speed use the function:
+
+```
+bobTheRobot.left(speed);
+```
+
+where speed is between 0 and 255, 0 being stop and 255 full speed.
+
+
+#### Motors Right
+
+To move right at full speed use the function:
+
+```
+bobTheRobot.right();
+```
+
+To move right at a set speed use the function:
+
+```
+bobTheRobot.right(speed);
 ```
 
 where speed is between 0 and 255, 0 being stop and 255 full speed.
