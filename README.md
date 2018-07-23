@@ -124,6 +124,16 @@ To stop the motors use the function:
 bobTheRobot.halt();
 ```
 
+#### Drive for how long?
+
+To drive for a certain amount of time use the following function:
+
+```
+delay(milliseconds);
+```
+
+Where milliseconds is the time you wish the motors to move for.
+
 
 
 
