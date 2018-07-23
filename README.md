@@ -116,6 +116,16 @@ where speed is between 0 and 255, 0 being stop and 255 full speed.
 
 
 
+#### Motors Stop
+
+To stop the motors use the function:
+
+```
+bobTheRobot.halt();
+```
+
+
+
 
 ## Running the tests
 
