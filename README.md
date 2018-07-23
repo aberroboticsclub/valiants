@@ -61,6 +61,27 @@ bobTheRobot.forwards(speed);
 
 where speed is between 0 and 255, 0 being stop and 255 full speed.
 
+
+
+#### Move Reverse
+
+To reverse at full speed use the function:
+
+```
+bobTheRobot.reverse();
+```
+
+To reverse at a set speed use the function:
+
+```
+bobTheRobot.reverse(speed);
+```
+
+where speed is between 0 and 255, 0 being stop and 255 full speed.
+
+
+
+
 ## Running the tests
 
 Explain how to run the automated tests for this system
