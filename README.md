@@ -28,17 +28,17 @@ Before you start programming you need to create a Valiant library object.
 This needs to be done inside the Arduino sketch, as shown below.
 
 ```
-#include <Valiant.h>
+#include <Valiant.h> //attach the valiant library
 
-Valiant bobTheRobot;
+Valiant bobTheRobot; //create a robot called bob or whatever
 
-void setup() {
-  bobTheRobot.setup(&Serial);
-}
+void setup() { //open setup function
+  bobTheRobot.setup(&Serial); //set up bob and send give it access to the usb
+} //close setup function
 
-void loop() {
-
-}
+void loop() { //open loop function
+  //don't do anything yet
+} //close loop function
 ```
 
 ### Motors
