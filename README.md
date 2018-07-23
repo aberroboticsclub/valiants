@@ -33,7 +33,7 @@ This needs to be done inside the Arduino sketch, as shown below.
 Valiant bobTheRobot; //create a robot called bob or whatever
 
 void setup() { //open setup function
-  bobTheRobot.setup(&Serial); //set up bob and send give it access to the usb
+  bobTheRobot.setup(&Serial); //set up bob and give it access to the usb
 } //close setup function
 
 void loop() { //open loop function
