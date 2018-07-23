@@ -134,6 +134,34 @@ delay(milliseconds);
 
 Where milliseconds is the time you wish the motors to move for.
 
+#### Example
+
+An example of the motor drives can be found below
+
+```
+#include <valiant.h>
+
+Valiant bobTheRobot;
+
+
+void setup() {
+  bobTheRobot.setup(&Serial);
+}
+
+void loop() {
+  bobTheRobot.forwards();
+  delay(1000);
+  bobTheRobot.left();
+  delay(1000);
+  bobTheRobot.right();
+  delay(1000);
+  bobTheRobot.reverse();
+  delay(1000);
+  bobTheRobot.halt();
+  delay(5000);
+}
+```
+
 
 
 
