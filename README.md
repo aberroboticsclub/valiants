@@ -43,9 +43,23 @@ void loop() { //open loop function
 
 ### Motors
 
-To move the valiant use the followin
+To move the valiant use the following functions
 
-End with an example of getting some data out of the system or using it for a little demo
+#### Move Forwards
+
+To move forwards at full speed use the function:
+
+```
+bobTheRobot.forwards();
+```
+
+To move forwards at a set speed use the function:
+
+```
+bobTheRobot.forwards(speed);
+```
+
+where speed is between 0 and 255, 0 being stop and 255 full speed.
 
 ## Running the tests
 
