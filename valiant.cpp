@@ -22,6 +22,9 @@ void Valiant::setup(HardwareSerial * s) {
 	pinMode(leftMotorReverse, OUTPUT);
 	pinMode(rightMotorForward, OUTPUT);
 	pinMode(rightMotorReverse, OUTPUT);
+
+	pinMode(led, OUTPUT);
+	pinMode(ldr, INPUT);
 	#ifdef DEBUG_SETUP
 	if (DEBUG_SETUP) {
 		serial->println("finished setup");
@@ -154,8 +157,30 @@ void Valiant::right(int speed) {
 	analogWrite(rightMotorReverse, speed);
 }
 
+void Valiant::turnOnLed() {
+	digitalWrite(led, HIGH);
+}
 
+void Valiant::turnOffLed() {
+	digitalWrite(led, LOW);
+}
 
+int Valiant::readLight() {
+	int currentLightLevel = analogRead(ldr);
+	return currentLightLevel;
+}
+
+int Valiant::readLeftInfrared() {
+	float volts = analogRead(leftInfrared)*0.0048828125;  // value from sensor * (5/1024)
+  	int distance = 13*pow(volts, -1); // worked out from datasheet graph
+  	return distance;
+}
+
+int Valiant::readRightInfrared() {
+	float volts = analogRead(rightInfrared)*0.0048828125;  // value from sensor * (5/1024)
+  	int distance = 13*pow(volts, -1); // worked out from datasheet graph
+  	return distance;
+}
 
 
 

@@ -98,6 +98,9 @@ public:
 	const byte leftEncoderTransmitter = A1;
 	const byte rightEncoderTransmitter = A2;
 
+	const byte led = 13;
+	const byte ldr = A0;
+
 
 
 	//usb serial connection parameters
@@ -142,6 +145,14 @@ public:
 	void halt();
 
 	void turretMove(int degree);
+
+	void turnOnLed();
+	void turnOffLed();
+
+	int readLight();
+
+	int readLeftInfrared();
+	int readRightInfrared();
 
 
 
