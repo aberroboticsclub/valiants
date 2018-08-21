@@ -25,6 +25,8 @@ void Valiant::setup(HardwareSerial * s) {
 
 	pinMode(led, OUTPUT);
 	pinMode(ldr, INPUT);
+
+	pinMode(speaker, OUTPUT);
 	#ifdef DEBUG_SETUP
 	if (DEBUG_SETUP) {
 		serial->println("finished setup");
