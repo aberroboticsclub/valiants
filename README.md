@@ -53,15 +53,6 @@ To move forwards at full speed use the function:
 bobTheRobot.forwards();
 ```
 
-To move forwards at a set speed use the function:
-
-```
-bobTheRobot.forwards(speed);
-```
-
-where speed is between 0 and 255, 0 being stop and 255 full speed.
-
-
 
 #### Motors Reverse
 
@@ -70,15 +61,6 @@ To reverse at full speed use the function:
 ```
 bobTheRobot.reverse();
 ```
-
-To reverse at a set speed use the function:
-
-```
-bobTheRobot.reverse(speed);
-```
-
-where speed is between 0 and 255, 0 being stop and 255 full speed.
-
 
 
 #### Motors Left
@@ -89,14 +71,6 @@ To move left at full speed use the function:
 bobTheRobot.left();
 ```
 
-To move left at a set speed use the function:
-
-```
-bobTheRobot.left(speed);
-```
-
-where speed is between 0 and 255, 0 being stop and 255 full speed.
-
 
 #### Motors Right
 
@@ -105,15 +79,6 @@ To move right at full speed use the function:
 ```
 bobTheRobot.right();
 ```
-
-To move right at a set speed use the function:
-
-```
-bobTheRobot.right(speed);
-```
-
-where speed is between 0 and 255, 0 being stop and 255 full speed.
-
 
 
 #### Motors Stop
@@ -161,6 +126,17 @@ void loop() {
   delay(5000);
 }
 ```
+
+
+### Ultrasonics
+
+### Servo
+
+### Speaker
+
+### Infrared
+
+### Wi-Fi
 
 
 
