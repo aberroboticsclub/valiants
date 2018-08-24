@@ -85,7 +85,7 @@ void loop() {
   delay(10);*/
 
 	// iterate over the notes of the melody:
-  for (int thisNote = 0; thisNote < 45; thisNote++) {
+  /*for (int thisNote = 0; thisNote < 45; thisNote++) {
 
     // to calculate the note duration, take one second
     // divided by the note type.
@@ -95,9 +95,9 @@ void loop() {
 
     // to distinguish the notes, set a minimum time between them.
     // the note's duration + 30% seems to work well:
-    //int pauseBetweenNotes = noteDuration * 1.30;
-    //delay(pauseBetweenNotes);
+    int pauseBetweenNotes = noteDuration * 1.30;
+    delay(pauseBetweenNotes);
     // stop the tone playing:
-    //noTone(speaker);
-  }
+    noTone(speaker);
+  }*/
 }
