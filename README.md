@@ -150,7 +150,73 @@ Serial.println(bobTheRobot.ping_ultrasonic_cm());
 
 ### Servo
 
+This function will change the angle of the servo.
+
+```
+bobTheRobot.turretMove(angle);
+```
+
+The variable 'angle' being a number between 0 and 180.
+
 ### Speaker
+
+To play songs, we need to define the notes and the durations. To define the notes, we will specify the notes and octaves. An example is shown below.
+
+```
+const int melody[] = {
+  NOTE_G4, NOTE_A4, NOTE_G4, NOTE_C5, NOTE_C5, NOTE_C5,
+  //YOU PUT YOUR BODY PART IN
+  NOTE_G4, NOTE_A4, NOTE_G4, NOTE_C5, NOTE_C5, NOTE_C5,
+  //YOU PUT YOUR BODY PART OUT
+  NOTE_G4, NOTE_A4, NOTE_G4, NOTE_C5, NOTE_C5, NOTE_C5,
+  //YOU PUT YOUR BODY PART IN
+  NOTE_A4, NOTE_G4, NOTE_B4, NOTE_A4, NOTE_B4, NOTE_A4, NOTE_B4,
+  //AND YOU SHAKE IT ALL ABOUT
+  NOTE_G4, NOTE_B4, NOTE_A4, NOTE_B4, NOTE_A4, NOTE_B4, NOTE_B4, NOTE_A4, NOTE_G4, NOTE_B4, NOTE_A4, NOTE_B4, NOTE_A4, NOTE_B4,
+  //YOU DO THE HOKEY POKEY AND YOU TURN YOURSELF AROUND
+  NOTE_G4, NOTE_G4, NOTE_G4, NOTE_A4, NOTE_B4, NOTE_C5,
+  //THAT'S WHAT IT'S ALL ABOUT
+};
+```
+
+Next the note durations will be defined. An example is shown below.
+
+```
+// note durations: 4 = quarter note, 8 = eighth note, etc.:
+const int noteDurations[] = {
+  8, 4, 8, 4, 2, 2,
+  //YOU PUT YOUR BODY PART IN
+  8, 4, 8, 4, 2, 2,
+  //YOU PUT YOUR BODY PART OUT
+  8, 4, 8, 4, 2, 2,
+  //YOU PUT YOUR BODY PART IN
+  4, 6, 4, 6, 6, 4, 2,
+  //AND YOU SHAKE IT ALL ABOUT
+  4, 4, 6, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1,
+  //YOU DO THE HOKEY POKEY AND YOU TURN YOURSELF AROUND
+  4, 2, 8, 2, 4, 4
+  //THAT'S WHAT IT'S ALL ABOUT
+};
+```
+
+A for loop will be used to iterate through the arrays containing the notes and durations. The tone function will then be used to output the notes to the speaker/amplifier. An example is shown below.
+
+```
+for (int thisNote = 0; thisNote < 45; thisNote++) {
+  // to calculate the note duration, take one second
+  // divided by the note type.
+  //e.g. quarter note = 1000 / 4, eighth note = 1000/8, etc.
+  int noteDuration = 1000 / noteDurations[thisNote];
+  tone(speaker, melody[thisNote], noteDuration);
+
+  // to distinguish the notes, set a minimum time between them.
+  // the note's duration + 30% seems to work well:
+  int pauseBetweenNotes = noteDuration * 1.30;
+  delay(pauseBetweenNotes);
+  // stop the tone playing:
+  noTone(speaker);
+}
+```
 
 ### Infrared
 
