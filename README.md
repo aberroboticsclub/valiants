@@ -130,6 +130,24 @@ void loop() {
 
 ### Ultrasonics
 
+An ultrasnonic sensor is mounted to the servo allowing it approximately 200 degrees of sensing obstacles. 
+
+To take readings from the ultrasonic sensor, use the following functions.
+
+```
+bobTheRobot.ping_ultrasonic_cm(); //read distance in centimeters
+
+bobTheRobot.ping_ultrasonic_in(); //read distance in inches
+```
+
+This function returns an int, therefore it can be assigned to another variable, or sent to the serial line to be printed. Example show below
+
+```
+int myDistance = bobTheRobot.ping_ultrasonic_cm();
+
+Serial.println(bobTheRobot.ping_ultrasonic_cm());
+```
+
 ### Servo
 
 ### Speaker
