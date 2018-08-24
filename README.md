@@ -140,7 +140,7 @@ bobTheRobot.ping_ultrasonic_cm(); //read distance in centimeters
 bobTheRobot.ping_ultrasonic_in(); //read distance in inches
 ```
 
-This function returns an int, therefore it can be assigned to another variable, or sent to the serial line to be printed. Example show below
+This function returns an int, therefore it can be assigned to another variable, or sent to the serial line to be printed. An example is shown below.
 
 ```
 int myDistance = bobTheRobot.ping_ultrasonic_cm();
@@ -219,6 +219,24 @@ for (int thisNote = 0; thisNote < 45; thisNote++) {
 ```
 
 ### Infrared
+
+Both infrared sensors are mounted at the front left and right of the Valiant, allowing for approximately 100 degrees of sensing. 
+
+To take readings from the infrared sensors, use the following functions.
+
+```
+bobTheRobot.readLeftInfrared(); //read distance from left sensor
+
+bobTheRobot.readRightInfrared(); //read distance from right sensor
+```
+
+This function returns an int, therefore it can be assigned to another variable, or sent to the serial line to be printed. An example is shown below.
+
+```
+int distanceLeft = bobTheRobot.readRightInfrared();
+
+Serial.println(bobTheRobot.readRightInfrared());
+```
 
 ### Wi-Fi
 
