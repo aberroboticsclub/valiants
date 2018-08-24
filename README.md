@@ -240,9 +240,11 @@ Serial.println(bobTheRobot.readRightInfrared());
 
 ### Wi-Fi
 
-
+The Wi-Fi modules are still being experimented with, the library and readme will be updated once I am happy that it is usable for members of the robotics club.
 
 ## Authors
 
 * **Tomos Fearn** - *Initial work* - [tomos.fearn.org.uk](http://tomos.fearn.org.uk)
 * **Dr Keiran Burrows** - *Initial work* - [Github](https://github.com/kbcool125)
+
+Probably a good idea to put a license on the worksheets and code at some point.
