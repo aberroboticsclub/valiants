@@ -238,6 +238,38 @@ int distanceLeft = bobTheRobot.readRightInfrared();
 Serial.println(bobTheRobot.readRightInfrared());
 ```
 
+### LED
+
+A high-intensity LED is mounted at the rear of the Valiant, this can be programmed to switch on and off using the following functions.
+
+Turning the LED on:
+
+```
+bobTheRobot.turnOnLed();
+```
+
+Turning the LED off:
+
+```
+bobTheRobot.turnOffLed();   
+```
+
+### LDR
+
+An LDR sensor is mounted at the front of the Valiant, this detects the light level in the room. The light level can be read by using the following function.
+
+```
+bobTheRobot.readLight();
+```
+
+This function returns an int, therefore it can be assigned to another variable, or sent to the serial line to be printed. An example is shown below.
+
+```
+int lightLevel = bobTheRobot.readLight();
+
+Serial.println(bobTheRobot.readLight());
+```
+
 ### Wi-Fi
 
 The Wi-Fi modules are still being experimented with, the library and readme will be updated once I am happy that it is usable for members of the robotics club.
