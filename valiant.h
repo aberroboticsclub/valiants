@@ -249,6 +249,8 @@ public:
 	int readLeftInfrared();
 	int readRightInfrared();
 
+	int calculateLength(int array);
+
 
 
 private:

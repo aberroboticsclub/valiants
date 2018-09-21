@@ -184,6 +184,11 @@ int Valiant::readRightInfrared() {
   	return distance;
 }
 
+int Valiant::calculateLength(int array) {
+	int calculatedLength = sizeof(array)/sizeof(int);
+	return calculatedLength;
+}
+
 
 
 
