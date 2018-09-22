@@ -202,19 +202,19 @@ const int noteDurations[] = {
 A for loop will be used to iterate through the arrays containing the notes and durations. The tone function will then be used to output the notes to the speaker/amplifier. An example is shown below.
 
 ```
-for (int thisNote = 0; thisNote < sizeof(melody)/sizeof(int); thisNote++) {
+for (int thisNote = 0; thisNote < calculateLength(melody); thisNote++) {
   // to calculate the note duration, take one second
   // divided by the note type.
   //e.g. quarter note = 1000 / 4, eighth note = 1000/8, etc.
   int noteDuration = 1000 / noteDurations[thisNote];
-  tone(speaker, melody[thisNote], noteDuration);
+  tone(valiant.speaker, melody[thisNote], noteDuration);
 
   // to distinguish the notes, set a minimum time between them.
   // the note's duration + 30% seems to work well:
   int pauseBetweenNotes = noteDuration * 1.30;
   delay(pauseBetweenNotes);
   // stop the tone playing:
-  noTone(speaker);
+  noTone(valiant.speaker);
 }
 ```
 
