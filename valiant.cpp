@@ -189,6 +189,27 @@ int Valiant::calculateLength(int array) {
 	return calculatedLength;
 }
 
+void Valiant::checkArrayLength(int array1, int array2) {
+	int lengthOfArray1 = sizeof(array1)/sizeof(int);
+	int lengthOfArray2 = sizeof(array2)/sizeof(int);
+	if (lengthOfArray1 == lengthOfArray2) {
+		serial->println("Array setup correct");
+		serial->print("melody array is ");
+		serial->print(lengthOfArray1);
+		serial->print(", ");
+		serial->print("duration array is ");
+		serial->println(lengthOfArray2);
+	}
+	else {
+		serial->println("Array setup incorrect");
+		serial->print("melody array is ");
+		serial->print(lengthOfArray1);
+		serial->print(", ");
+		serial->print("duration array is ");
+		serial->println(lengthOfArray2);
+	}
+}
+
 
 
 

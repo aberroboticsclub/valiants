@@ -116,6 +116,7 @@ void loop() {
 
   #ifdef TEST_SPEAKER
   if (TEST_SPEAKER) {
+  valiant.checkArrayLength(melody, noteDurations);
 	// iterate over the notes of the melody:
   for (int thisNote = 0; thisNote < valiant.calculateLength(melody); thisNote++) {
 
@@ -134,4 +135,5 @@ void loop() {
   }
   }
   #endif
+
 }

@@ -250,6 +250,7 @@ public:
 	int readRightInfrared();
 
 	int calculateLength(int array);
+	void checkArrayLength(int array1, int array2);
 
 
 
