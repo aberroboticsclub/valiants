@@ -184,10 +184,9 @@ int Valiant::readRightInfrared() {
   	int distance = 13*pow(volts, -1); // worked out from datasheet graph
   	return distance;
 }
-
-int Valiant::calculateLength(int array) {
-	int calculatedLength = sizeof(array)/sizeof(int);
-	return calculatedLength;
+/*
+void Valiant::calculateLength(int array) {
+	melodyLength = sizeof(array)/sizeof(int);
 }
 
 void Valiant::checkArrayLength(int array1, int array2) {
@@ -209,7 +208,7 @@ void Valiant::checkArrayLength(int array1, int array2) {
 		serial->print("duration array is ");
 		serial->println(lengthOfArray2);
 	}
-}
+}*/
 
 
 

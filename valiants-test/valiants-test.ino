@@ -5,7 +5,7 @@
 #define TEST_LDR false
 #define TEST_SERVO false
 #define TEST_INFRARED false
-#define TEST_SPEAKER false
+#define TEST_SPEAKER true
 
 Valiant valiant;
 
@@ -116,9 +116,9 @@ void loop() {
 
   #ifdef TEST_SPEAKER
   if (TEST_SPEAKER) {
-  valiant.checkArrayLength(melody, noteDurations);
+  //valiant.checkArrayLength(melody, noteDurations);
 	// iterate over the notes of the melody:
-  for (int thisNote = 0; thisNote < valiant.calculateLength(melody); thisNote++) {
+  for (int thisNote = 0; thisNote < sizeof(melody)/sizeof(int); thisNote++) {
 
     // to calculate the note duration, take one second
     // divided by the note type.
@@ -137,3 +137,4 @@ void loop() {
   #endif
 
 }
+//sizeof(melody)/sizeof(int)

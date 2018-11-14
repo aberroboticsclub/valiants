@@ -109,6 +109,8 @@ public:
 	const int baudRate = 9600;
 	HardwareSerial * serial;
 
+	int melodyLength = 0;
+
 	//Musical notes to frequencies
 	#define NOTE_B0  31
 	#define NOTE_C1  33
@@ -250,8 +252,8 @@ public:
 	int readLeftInfrared();
 	int readRightInfrared();
 
-	int calculateLength(int array);
-	void checkArrayLength(int array1, int array2);
+	/*void calculateLength(int array);
+	void checkArrayLength(int array1, int array2);*/
 
 
 
